@@ -1,0 +1,42 @@
+{
+  "name": "sanjeevani",
+  "version": "1.0.0",
+  "description": "Anonymous mental health support platform with AI moderation and therapy booking",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "redis": "^4.6.12",
+    "openai": "^4.24.1",
+    "stripe": "^14.12.0",
+    "googleapis": "^131.0.0",
+    "nodemailer": "^6.9.8",
+    "uuid": "^9.0.1",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.4",
+    "express-rate-limit": "^7.1.5",
+    "firebase-admin": "^12.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "mental-health",
+    "anonymous",
+    "ai-moderation",
+    "therapy-booking",
+    "privacy-focused"
+  ],
+  "author": "Sanjeevani Team",
+  "license": "MIT"
+}
