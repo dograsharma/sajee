@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="description" content="Sanjeevani - Anonymous mental health support platform with AI assistance, mood tracking, journaling, and therapy booking." />
+    <meta name="keywords" content="mental health, therapy, anonymous support, mood tracking, journaling, AI chatbot, crisis support" />
+    <meta name="author" content="Sanjeevani Team" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sanjeevani.com/" />
+    <meta property="og:title" content="Sanjeevani - Anonymous Mental Health Support" />
+    <meta property="og:description" content="Safe, anonymous mental health support with AI assistance, mood tracking, and professional therapy booking." />
+    <meta property="og:image" content="%PUBLIC_URL%/social-preview.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sanjeevani.com/" />
+    <meta property="twitter:title" content="Sanjeevani - Anonymous Mental Health Support" />
+    <meta property="twitter:description" content="Safe, anonymous mental health support with AI assistance, mood tracking, and professional therapy booking." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/social-preview.jpg" />
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Sanjeevani - Anonymous Mental Health Support</title>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      /* Loading spinner styles */
+      .loading-spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid #f3f4f6;
+        border-radius: 50%;
+        border-top-color: #6366f1;
+        animation: spin 1s ease-in-out infinite;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Focus styles for accessibility */
+      *:focus {
+        outline: 2px solid #6366f1;
+        outline-offset: 2px;
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 3px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    
+    <!-- Crisis resources that are always available -->
+    <div id="crisis-resources" style="display: none;">
+      <div style="position: fixed; bottom: 20px; right: 20px; background: #dc2626; color: white; padding: 16px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 1000; max-width: 300px;">
+        <h3 style="margin-bottom: 8px; font-size: 16px;">🆘 Need Immediate Help?</h3>
+        <p style="margin-bottom: 12px; font-size: 14px;">Crisis support is available 24/7:</p>
+        <div style="margin-bottom: 8px;">
+          <strong>Call or Text: 988</strong><br>
+          <small>Suicide & Crisis Lifeline</small>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <strong>Text HOME to 741741</strong><br>
+          <small>Crisis Text Line</small>
+        </div>
+        <button onclick="document.getElementById('crisis-resources').style.display='none'" 
+                style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px;">
+          Close
+        </button>
+      </div>
+    </div>
+    
+    <script>
+      // Show crisis resources if needed
+      function showCrisisResources() {
+        document.getElementById('crisis-resources').style.display = 'block';
+      }
+      
+      // Make crisis resources globally available
+      window.showCrisisResources = showCrisisResources;
+    </script>
+  </body>
+</html>
